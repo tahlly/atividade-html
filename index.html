@@ -2,6 +2,34 @@
 <html lang="pt-BR">
 <head>
     <style>
+        table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+}
+
+th, td{
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+thead{
+    background-color: #007bff;
+    color: white;
+}
+
+tbody tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+tfoot{
+    background-color: #333;
+    color: white;
+    font-weight: bold;
+}
+
 body{
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -127,6 +155,58 @@ Receber novidades
 <input type="submit" value="Enviar">
 
 </form>
+<section>
+
+<h2>Tabela de Vendas</h2>
+
+<table>
+
+<thead>
+<tr>
+    <th rowspan="2">Produto</th>
+    <th colspan="2">Vendas</th>
+    <th rowspan="2">Total</th>
+</tr>
+
+<tr>
+    <th>Janeiro</th>
+    <th>Fevereiro</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+    <td>Notebook</td>
+    <td>10</td>
+    <td>15</td>
+    <td>25</td>
+</tr>
+
+<tr>
+    <td>Mouse</td>
+    <td>20</td>
+    <td>18</td>
+    <td>38</td>
+</tr>
+
+<tr>
+    <td>Teclado</td>
+    <td>12</td>
+    <td>10</td>
+    <td>22</td>
+</tr>
+</tbody>
+
+<tfoot>
+<tr>
+    <td colspan="3">Total Geral</td>
+    <td>85</td>
+</tr>
+</tfoot>
+
+</table>
+
+</section>
 
 </body>
 </html>
