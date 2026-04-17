@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Projeto HTML Completo</title>
+<title>Projeto Web Completo</title>
 
 <style>
 
@@ -27,18 +27,15 @@ body{
     text-align: center;
     padding: 40px 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    border-bottom: 4px solid white;
 }
 
 .titulo-principal{
     font-size: 36px;
     margin-bottom: 10px;
-    letter-spacing: 2px;
 }
 
 .subtitulo{
     font-size: 18px;
-    font-style: italic;
 }
 
 .bloco-conteudo{
@@ -112,22 +109,40 @@ tfoot{
     border-radius: 10px;
 }
 
-label{
+.campo{
+    margin-bottom: 20px;
+}
+
+.campo label{
+    display: block;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
+.check-group label{
+    display: inline;
+    margin-right: 20px;
+    font-weight: normal;
+}
+
+.check-group input{
+    margin-right: 6px;
+}
+
 input[type="text"],
-input[type="email"]{
+input[type="email"],
+select,
+textarea{
     width: 100%;
-    max-width: 400px;
+    max-width: 500px;
     padding: 10px;
-    margin: 8px 0 15px;
     border: 1px solid #ccc;
     border-radius: 8px;
 }
 
-input[type="checkbox"]{
-    margin-right: 8px;
+textarea{
+    resize: vertical;
+    height: 100px;
 }
 
 input[type="submit"]{
@@ -156,51 +171,59 @@ input[type="submit"]:hover{
 <body>
 
 <header id="topo">
-    <h1 class="titulo-principal">Projeto HTML Completo</h1>
-    <p class="subtitulo">Atividades desenvolvidas em HTML e CSS</p>
+<h1 class="titulo-principal">Projeto Web Completo</h1>
+<p class="subtitulo">Listas, Tabelas e Formulários em uma Interface Completa</p>
 </header>
 
 <section class="bloco-conteudo">
-<h2 class="titulo-secao">Lista Não Ordenada</h2>
+
+<h2 class="titulo-secao">Lista de Tecnologias</h2>
 
 <ul>
-    <li>Notebook</li>
-    <li>Mouse</li>
-    <li>Teclado</li>
-    <li>Monitor</li>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>GitHub</li>
 </ul>
+
 </section>
 
 <section class="bloco-conteudo">
-<h2 class="titulo-secao">Lista Ordenada</h2>
+
+<h2 class="titulo-secao">Etapas de Desenvolvimento</h2>
 
 <ol>
-    <li>Ligar o computador</li>
-    <li>Abrir navegador</li>
-    <li>Acessar GitHub</li>
-    <li>Enviar atividade</li>
+<li>Planejar estrutura</li>
+<li>Criar HTML</li>
+<li>Aplicar CSS</li>
+<li>Publicar no GitHub</li>
 </ol>
+
 </section>
 
 <section class="bloco-conteudo">
+
 <h2 class="titulo-secao">Lista de Definição</h2>
 
 <dl>
-    <dt>HTML</dt>
-    <dd>Linguagem de marcação usada para estruturar páginas web.</dd>
+<dt>HTML</dt>
+<dd>Linguagem de marcação para páginas web.</dd>
 
-    <dt>CSS</dt>
-    <dd>Linguagem usada para estilizar páginas web.</dd>
+<dt>CSS</dt>
+<dd>Usado para estilização visual.</dd>
 
-    <dt>JavaScript</dt>
-    <dd>Linguagem usada para interatividade.</dd>
+<dt>JavaScript</dt>
+<dd>Adiciona interatividade.</dd>
 </dl>
+
 </section>
 
 <section class="bloco-conteudo">
-<h2 class="titulo-secao">Tabela Simples</h2>
+
+<h2 class="titulo-secao">Tabela de Funcionários</h2>
 
 <table>
+
 <thead>
 <tr>
 <th>Nome</th>
@@ -228,13 +251,17 @@ input[type="submit"]:hover{
 <td>26</td>
 </tr>
 </tbody>
+
 </table>
+
 </section>
 
 <section class="bloco-conteudo">
-<h2 class="titulo-secao">Tabela Avançada</h2>
+
+<h2 class="titulo-secao">Tabela de Vendas</h2>
 
 <table>
+
 <thead>
 <tr>
 <th rowspan="2">Produto</th>
@@ -277,38 +304,65 @@ input[type="submit"]:hover{
 <td>85</td>
 </tr>
 </tfoot>
+
 </table>
+
 </section>
 
 <section class="bloco-conteudo">
+
 <h2 class="titulo-secao">Formulário Interativo</h2>
 
 <form id="formulario-cadastro">
 
-<label for="nome">Nome:</label><br>
+<div class="campo">
+<label for="nome">Nome:</label>
 <input type="text" id="nome" name="nome">
+</div>
 
-<label for="email">Email:</label><br>
+<div class="campo">
+<label for="email">Email:</label>
 <input type="email" id="email" name="email">
+</div>
 
-<label>Interesses:</label><br><br>
+<div class="campo">
+<label for="curso">Curso:</label>
+<select id="curso">
+<option>HTML</option>
+<option>CSS</option>
+<option>JavaScript</option>
+</select>
+</div>
 
+<div class="campo">
+<label>Interesses:</label>
+
+<div class="check-group">
 <input type="checkbox" id="html">
-<label for="html">HTML</label><br>
+<label for="html">HTML</label>
 
 <input type="checkbox" id="css">
-<label for="css">CSS</label><br>
+<label for="css">CSS</label>
 
 <input type="checkbox" id="js">
-<label for="js">JavaScript</label><br><br>
+<label for="js">JavaScript</label>
+</div>
+
+</div>
+
+<div class="campo">
+<label for="mensagem">Mensagem:</label>
+<textarea id="mensagem"></textarea>
+</div>
 
 <input type="submit" value="Enviar">
 
 </form>
+
 </section>
 
 <footer id="rodape">
-<p>Projeto desenvolvido para estudos de HTML e CSS</p>
+<p>Projeto desenvolvido para estudos de HTML e CSS por Thalita utilizando IA </p>
 </footer>
 
 </body>
