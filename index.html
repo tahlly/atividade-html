@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -22,24 +21,27 @@ body{
     color: #333;
 }
 
-header{
+#topo{
     background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
     text-align: center;
     padding: 40px 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    border-bottom: 4px solid white;
 }
 
-header h1{
+.titulo-principal{
     font-size: 36px;
     margin-bottom: 10px;
+    letter-spacing: 2px;
 }
 
-header p{
+.subtitulo{
     font-size: 18px;
+    font-style: italic;
 }
 
-section{
+.bloco-conteudo{
     background: white;
     width: 90%;
     max-width: 1000px;
@@ -47,13 +49,15 @@ section{
     padding: 25px;
     border-radius: 14px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    border-left: 6px solid #007bff;
 }
 
-h2{
+.titulo-secao{
     color: #007bff;
     margin-bottom: 18px;
     border-bottom: 2px solid #eee;
     padding-bottom: 10px;
+    text-transform: uppercase;
 }
 
 ul, ol{
@@ -102,6 +106,12 @@ tfoot{
     font-weight: bold;
 }
 
+#formulario-cadastro{
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 label{
     font-weight: bold;
 }
@@ -133,7 +143,7 @@ input[type="submit"]:hover{
     background: #0056b3;
 }
 
-footer{
+#rodape{
     text-align: center;
     padding: 30px;
     color: #555;
@@ -145,13 +155,13 @@ footer{
 
 <body>
 
-<header>
-    <h1>Projeto HTML Completo</h1>
-    <p>Atividades desenvolvidas em HTML e CSS</p>
+<header id="topo">
+    <h1 class="titulo-principal">Projeto HTML Completo</h1>
+    <p class="subtitulo">Atividades desenvolvidas em HTML e CSS</p>
 </header>
 
-<section>
-<h2>Lista Não Ordenada</h2>
+<section class="bloco-conteudo">
+<h2 class="titulo-secao">Lista Não Ordenada</h2>
 
 <ul>
     <li>Notebook</li>
@@ -161,8 +171,8 @@ footer{
 </ul>
 </section>
 
-<section>
-<h2>Lista Ordenada</h2>
+<section class="bloco-conteudo">
+<h2 class="titulo-secao">Lista Ordenada</h2>
 
 <ol>
     <li>Ligar o computador</li>
@@ -172,8 +182,8 @@ footer{
 </ol>
 </section>
 
-<section>
-<h2>Lista de Definição</h2>
+<section class="bloco-conteudo">
+<h2 class="titulo-secao">Lista de Definição</h2>
 
 <dl>
     <dt>HTML</dt>
@@ -187,11 +197,10 @@ footer{
 </dl>
 </section>
 
-<section>
-<h2>Tabela Simples</h2>
+<section class="bloco-conteudo">
+<h2 class="titulo-secao">Tabela Simples</h2>
 
 <table>
-
 <thead>
 <tr>
 <th>Nome</th>
@@ -219,15 +228,13 @@ footer{
 <td>26</td>
 </tr>
 </tbody>
-
 </table>
 </section>
 
-<section>
-<h2>Tabela Avançada</h2>
+<section class="bloco-conteudo">
+<h2 class="titulo-secao">Tabela Avançada</h2>
 
 <table>
-
 <thead>
 <tr>
 <th rowspan="2">Produto</th>
@@ -270,14 +277,13 @@ footer{
 <td>85</td>
 </tr>
 </tfoot>
-
 </table>
 </section>
 
-<section>
-<h2>Formulário Interativo</h2>
+<section class="bloco-conteudo">
+<h2 class="titulo-secao">Formulário Interativo</h2>
 
-<form>
+<form id="formulario-cadastro">
 
 <label for="nome">Nome:</label><br>
 <input type="text" id="nome" name="nome">
@@ -301,10 +307,9 @@ footer{
 </form>
 </section>
 
-<footer>
+<footer id="rodape">
 <p>Projeto desenvolvido para estudos de HTML e CSS</p>
 </footer>
 
 </body>
 </html>
-```
