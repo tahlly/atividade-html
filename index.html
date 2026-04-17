@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -9,20 +10,301 @@
 
 <style>
 
-body{
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+*{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2f3, #dfe9f3);
+    color: #333;
 }
 
 header{
-    background: #007bff;
+    background: linear-gradient(135deg, #007bff, #0056b3);
     color: white;
     text-align: center;
-    padding: 25px;
+    padding: 40px 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+header h1{
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p{
+    font-size: 18px;
 }
 
 section{
     background: white;
-    ma
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+h2{
+    color: #007bff;
+    margin-bottom: 18px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+ul, ol{
+    padding-left: 25px;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+dt{
+    font-weight: bold;
+    color: #0056b3;
+    margin-top: 10px;
+}
+
+dd{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th, td{
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+thead{
+    background: #007bff;
+    color: white;
+}
+
+tbody tr:nth-child(even){
+    background: #f8f9fa;
+}
+
+tfoot{
+    background: #333;
+    color: white;
+    font-weight: bold;
+}
+
+label{
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"]{
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 8px 0 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+input[type="checkbox"]{
+    margin-right: 8px;
+}
+
+input[type="submit"]{
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover{
+    background: #0056b3;
+}
+
+footer{
+    text-align: center;
+    padding: 30px;
+    color: #555;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+    <h1>Projeto HTML Completo</h1>
+    <p>Atividades desenvolvidas em HTML e CSS</p>
+</header>
+
+<section>
+<h2>Lista Não Ordenada</h2>
+
+<ul>
+    <li>Notebook</li>
+    <li>Mouse</li>
+    <li>Teclado</li>
+    <li>Monitor</li>
+</ul>
+</section>
+
+<section>
+<h2>Lista Ordenada</h2>
+
+<ol>
+    <li>Ligar o computador</li>
+    <li>Abrir navegador</li>
+    <li>Acessar GitHub</li>
+    <li>Enviar atividade</li>
+</ol>
+</section>
+
+<section>
+<h2>Lista de Definição</h2>
+
+<dl>
+    <dt>HTML</dt>
+    <dd>Linguagem de marcação usada para estruturar páginas web.</dd>
+
+    <dt>CSS</dt>
+    <dd>Linguagem usada para estilizar páginas web.</dd>
+
+    <dt>JavaScript</dt>
+    <dd>Linguagem usada para interatividade.</dd>
+</dl>
+</section>
+
+<section>
+<h2>Tabela Simples</h2>
+
+<table>
+
+<thead>
+<tr>
+<th>Nome</th>
+<th>Cargo</th>
+<th>Idade</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Ana</td>
+<td>Analista</td>
+<td>28</td>
+</tr>
+
+<tr>
+<td>Lucas</td>
+<td>Desenvolvedor</td>
+<td>32</td>
+</tr>
+
+<tr>
+<td>Marina</td>
+<td>Designer</td>
+<td>26</td>
+</tr>
+</tbody>
+
+</table>
+</section>
+
+<section>
+<h2>Tabela Avançada</h2>
+
+<table>
+
+<thead>
+<tr>
+<th rowspan="2">Produto</th>
+<th colspan="2">Vendas</th>
+<th rowspan="2">Total</th>
+</tr>
+
+<tr>
+<th>Janeiro</th>
+<th>Fevereiro</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Notebook</td>
+<td>10</td>
+<td>15</td>
+<td>25</td>
+</tr>
+
+<tr>
+<td>Mouse</td>
+<td>20</td>
+<td>18</td>
+<td>38</td>
+</tr>
+
+<tr>
+<td>Teclado</td>
+<td>12</td>
+<td>10</td>
+<td>22</td>
+</tr>
+</tbody>
+
+<tfoot>
+<tr>
+<td colspan="3">Total Geral</td>
+<td>85</td>
+</tr>
+</tfoot>
+
+</table>
+</section>
+
+<section>
+<h2>Formulário Interativo</h2>
+
+<form>
+
+<label for="nome">Nome:</label><br>
+<input type="text" id="nome" name="nome">
+
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email">
+
+<label>Interesses:</label><br><br>
+
+<input type="checkbox" id="html">
+<label for="html">HTML</label><br>
+
+<input type="checkbox" id="css">
+<label for="css">CSS</label><br>
+
+<input type="checkbox" id="js">
+<label for="js">JavaScript</label><br><br>
+
+<input type="submit" value="Enviar">
+
+</form>
+</section>
+
+<footer>
+<p>Projeto desenvolvido para estudos de HTML e CSS</p>
+</footer>
+
+</body>
+</html>
+```
